@@ -1,7 +1,6 @@
 def countingSort(arr):
     # Write your code here
     checker_arr = [0]*100
-    
     for i in range(len(arr)):
         checker_arr[arr[i]]+=1
     # for i in checker_arr()
