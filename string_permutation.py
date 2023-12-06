@@ -15,10 +15,11 @@ def next_permutation(s):
     #     print(f"in fu{arr}")
     #     return arr
 
-     
+    print(i)
     # Find the largest index i such that arr[i] < arr[i+1]
     while i >= 0 and arr[i] >= arr[i+1]:
         i -= 1
+        print(i)
      # If no such index exists, return "No next Permutation"
     if i < 0:
         return "No next Permutation possible"
@@ -38,7 +39,7 @@ def next_permutation(s):
 
  
 
-s = "aabc"
+s = "cbaa"
 print(next_permutation(s))
 
 
