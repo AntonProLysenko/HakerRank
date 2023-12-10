@@ -3,23 +3,12 @@ def next_permutation(s):
     arr = list(s)
     lenth = len(arr)
     i = lenth - 2
-
-
-    # def rev(arr, start, end):
-    #     while start < end:
-    #         temp_memo = arr[start]
-    #         arr[start] = arr[end]
-    #         arr[end] = temp_memo
-    #     start += 1
-    #     end -= 1
-    #     print(f"in fu{arr}")
-    #     return arr
-
-    print(i)
     # Find the largest index i such that arr[i] < arr[i+1]
+
     while i >= 0 and arr[i] >= arr[i+1]:
+        print(f"Index {i} Before")
         i -= 1
-        print(i)
+        print(f"Index {i} after")
      # If no such index exists, return "No next Permutation"
     if i < 0:
         return "No next Permutation possible"
@@ -28,7 +17,9 @@ def next_permutation(s):
     j = lenth - 1
      # Find the largest index j such that arr[i] < arr[j]
     while j >= 0 and arr[j] <= arr[i]:
+        print(f"Jdex{j} before")
         j -= 1
+        print(f"Jdex{j} after")
     # Swap arr[i] and arr[j]
     arr[i], arr[j] = arr[j], arr[i]
     # Reverse the sublist arr[start:end+1]
