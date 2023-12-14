@@ -7,8 +7,7 @@ import math
 def pageCount(n, p):
     # Write your code here
     counter = 0
-    print(f"Devided n: {n//2}")
-    print(f"Needed Page: {p}")
+
     # finding way how to open(from the back or beginign of the book) by finding middle of the book and comparing to needed page
     if p <= n//2:
         #Opening from the begining
@@ -19,7 +18,7 @@ def pageCount(n, p):
         if n % 2 ==0:
             for page in range(n-1, p-1, -1):
                 counter+=1
-        else:# here if number o pages are odd and we need page 4 of 5 total pages we don't have to flip a page(book opening doesn't counts)
+        else:# here if number of pages is odd and we need page 4, of 5 total pages, we don't have to flip a page(book opening doesn't count)
             for page in range(n-1, p, -1):
                 counter+=1
     return math.ceil(counter / 2)
