@@ -5,12 +5,11 @@ def minFlips(target):
      
     for i in range(len(target)):
          
-        # If curr occurs in the final string
+
         if (target[i] == curr):
             count += 1
              
-            # Switch curr to '0' if '1'
-            # or vice-versa
+           
             curr = chr(48 + (ord(curr) + 1) % 2)
      
     return count
